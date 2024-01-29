@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+
+   <script>
+
+      /*Se recomienda crear el arreglo con los siguientes valores de prueba
+   inicio=[“unacadena”,3,9,1,10,500,1,10,true];
+   El algoritmo de ordenación tiene que ser implementado desde 0. Es decir, no se puede
+   utilizar una librería que ordene ni funciones como .sort para resolver.
+   
+   */
+
+      arreglo = ['unacadena', 3, 9, 1, 10, 500, 1, 10, true]
+      arregloDeNumeros = []
+
+      for (let i = 0; i < arreglo.length; i++) {
+         if (typeof arreglo[i] == "number") {
+            arregloDeNumeros.push(arreglo[i]);
+         }
+      }
+
+      for (let i = 0; i < arregloDeNumeros.length; i++) {
+         for (let j = i + 1; j < arregloDeNumeros.length; j++) {
+            let intermedio = 0
+            if (arregloDeNumeros[i] > arregloDeNumeros[j]) {
+               intermedio = arregloDeNumeros[i]
+               arregloDeNumeros[i] = arregloDeNumeros[j]
+               arregloDeNumeros[j] = intermedio
+
+
+            }
+
+         }
+
+      }
+
+      for (let i = 0; i < arregloDeNumeros.length; i++) {
+         console.log(arregloDeNumeros[i])
+      }
+
+
+
+   </script>
+
+</body>
+
+
+
+</html>
